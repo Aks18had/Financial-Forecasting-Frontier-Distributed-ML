@@ -2,103 +2,57 @@
 
 ## Overview
 
-Financial Forecasting Frontier is a Distributed Machine Learning capstone project focused on applying large-scale data processing, machine learning, and real-time analytics techniques to banking data. The project demonstrates the use of Hadoop, Hive, Apache Spark, Spark MLlib, Structured Streaming, and Data Parallelism to extract insights, build predictive models, and simulate real-time decision-making systems.
-
-The project uses the Bank Marketing Dataset to analyze customer behavior and predict term deposit subscriptions while showcasing distributed computing concepts used in modern financial institutions.
+Financial Forecasting Frontier is an end-to-end banking analytics project that demonstrates the use of Distributed Computing and Machine Learning for analyzing customer behavior, campaign performance, and term deposit subscription trends. The project combines Hadoop, Hive, Apache Spark, Spark ML, Spark Streaming, and Power BI to simulate a modern banking analytics workflow.
 
 ---
 
-## Project Objectives
+## Project Objective
 
-* Perform distributed data analysis using Hadoop, Hive, and Apache Spark.
-* Explore and preprocess banking customer data.
-* Build and evaluate machine learning models using Spark MLlib.
-* Demonstrate data parallelism for scalable analytics.
-* Simulate real-time analytics using Spark Structured Streaming.
-* Generate actionable business insights from banking data.
-* Understand resource utilization, distributed execution, and scheduling concepts.
+* Analyze banking customer data at scale using distributed computing.
+* Perform exploratory data analysis using Apache Spark.
+* Build predictive machine learning models for term deposit subscription prediction.
+* Simulate real-time transaction analysis using Spark Streaming.
+* Create an interactive Power BI dashboard for business decision-making.
+
+---
+
+## My Approach
+
+1. Loaded and explored banking data using Spark.
+2. Performed large-scale data processing and exploratory analysis.
+3. Built and evaluated machine learning models using Spark ML.
+4. Implemented distributed data processing and parallel computing concepts.
+5. Simulated real-time analytics using Spark Structured Streaming.
+6. Developed a multi-page Power BI dashboard to present business insights.
 
 ---
 
 ## Technologies Used
 
-### Distributed Computing
-
+* Python
 * Apache Hadoop
 * Apache Hive
 * Apache Spark
-* Spark SQL
-* Spark Structured Streaming
-
-### Machine Learning
-
+* PySpark
 * Spark MLlib
-* Logistic Regression
-* Random Forest Classification
-* Hyperparameter Tuning
-* Cross Validation
-
-### Programming & Analytics
-
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-
-### Development Environment
-
+* Spark Structured Streaming
 * Google Colab
-* GitHub
+* Power BI
+* DAX
 
 ---
 
 ## Dataset Information
 
-### Dataset
+**Dataset:** Bank Marketing Dataset
 
-Bank Marketing Dataset Provided by Alma Better
+**Records:** 4,521
 
-### Domain
+**Features:** 17
 
-Banking and Financial Services
+**Target Variable:** `y` (Term Deposit Subscription)
 
-### Target Variable
-
-`y`
-
-* Yes → Customer subscribed to a term deposit
-* No → Customer did not subscribe
-
-### Features Include
-
-* Age
-* Job
-* Marital Status
-* Education
-* Account Balance
-* Housing Loan Status
-* Personal Loan Status
-* Campaign Information
-* Contact Information
-* Previous Campaign Outcomes
-
----
-
-## Project Structure
-
-```text
-Financial-Forecasting-Frontier-Distributed-ML
-│
-├── 01_Hadoop_Hive.ipynb
-├── 02_Spark_EDA.ipynb
-├── 03_Spark_ML.ipynb
-├── 04_Data_Parallelism.ipynb
-├── 05_Spark_Streaming.ipynb
-│
-├── bank.csv
-│
-└── README.md
-```
+The dataset contains customer demographics, financial information, campaign details, and subscription outcomes.
 
 ---
 
@@ -106,191 +60,134 @@ Financial-Forecasting-Frontier-Distributed-ML
 
 ### 01_Hadoop_Hive.ipynb
 
-Topics Covered:
-
-* Banking data analysis
-* Hive-style querying
-* Aggregations
-* Correlation analysis
-* Customer segmentation
-* Banking business insights
-
----
+Data ingestion, querying, aggregation, and banking analytics using distributed data management concepts.
 
 ### 02_Spark_EDA.ipynb
 
-Topics Covered:
-
-* Data loading and inspection
-* Data filtering
-* Aggregations
-* User Defined Functions (UDFs)
-* Spark SQL queries
-* Data visualization
-* Exploratory Data Analysis
-
----
+Exploratory Data Analysis, data transformations, trend discovery, and visualization using Spark.
 
 ### 03_Spark_ML.ipynb
 
-Topics Covered:
-
-* Data preprocessing
-* Feature engineering
-* Logistic Regression
-* Random Forest
-* Model evaluation
-* Hyperparameter tuning
-* Feature coefficient analysis
-
-Key Results:
-
-* Logistic Regression Accuracy: ~89%
-* F1 Score: ~87%
-
----
+Machine learning pipeline development, model training, evaluation, and hyperparameter tuning.
 
 ### 04_Data_Parallelism.ipynb
 
-Topics Covered:
-
-* Data partitioning
-* Parallel aggregations
-* Distributed machine learning
-* Resource monitoring
-* Spark scheduling
-* DAG execution concepts
-
-Key Results:
-
-* 4 Spark partitions used
-* Distributed model training
-* Efficient CPU and memory utilization
-
----
+Implementation of Spark data parallelism techniques to improve processing efficiency.
 
 ### 05_Spark_Streaming.ipynb
 
-Topics Covered:
-
-* Structured Streaming
-* Real-time aggregations
-* Real-time predictions
-* Window operations
-* Watermarking
-* Trend analysis
-
-Key Results:
-
-* Simulated streaming analytics
-* Real-time prediction workflow
-* Window-based monitoring
-* Watermark handling demonstration
+Simulation of real-time transaction processing using Spark Structured Streaming.
 
 ---
 
-## Installation and Setup
+## Power BI Dashboard
 
-### Clone Repository
+### Dashboard Pages
 
-```bash
-git clone https://github.com/Aks18had/Financial-Forecasting-Frontier-Distributed-ML.git
-cd Financial-Forecasting-Frontier-Distributed-ML
-```
+* Executive Overview
+* Customer Segmentation
+* Campaign Performance
 
-### Install Dependencies
+### Features
 
-```bash
-pip install pyspark pandas numpy matplotlib
-```
-
----
-
-## Running the Project
-
-### Google Colab Setup
-
-Mount Google Drive:
-
-```python
-from google.colab import drive
-drive.mount('/content/drive')
-```
-
-Install PySpark:
-
-```python
-!pip install pyspark -q
-```
-
-Update Dataset Path:
-
-```python
-DATA_PATH = "/content/drive/MyDrive/Distributed_ML_Project/bank.csv"
-```
-
-Run notebooks sequentially.
+* KPI Monitoring
+* Customer Profiling
+* Campaign Analysis
+* Subscription Trends
+* Interactive Filters
+* Advanced DAX Measures
 
 ---
 
-## Recommended Execution Order
+## Outcomes
 
-1. 01_Hadoop_Hive.ipynb
-2. 02_Spark_EDA.ipynb
-3. 03_Spark_ML.ipynb
-4. 04_Data_Parallelism.ipynb
-5. 05_Spark_Streaming.ipynb
+* Built a complete distributed analytics pipeline.
+* Successfully analyzed customer and campaign behavior.
+* Developed predictive models for subscription forecasting.
+* Demonstrated distributed processing and real-time analytics capabilities.
+* Created an interactive business intelligence dashboard.
+
+---
+
+## Model Performance
+
+### Logistic Regression
+
+* Accuracy: 89.17%
+* Precision: 87.07%
+* Recall: 89.17%
+* F1 Score: 87.07%
+
+### Random Forest
+
+* Accuracy: 88.71%
+* Precision: 89.99%
+* Recall: 88.71%
+* F1 Score: 83.93%
+
+### Hyperparameter Tuned Logistic Regression
+
+* Accuracy: 89.06%
+* Precision: 86.82%
+* Recall: 89.06%
+* F1 Score: 86.32%
 
 ---
 
 ## Key Findings
 
-* Previous campaign outcomes strongly influence subscription behavior.
-* Customers with housing loans show higher subscription likelihood.
-* Customers with personal loans show lower subscription likelihood.
-* Logistic Regression achieved the best overall model performance.
-* Data parallelism significantly improves processing efficiency.
-* Structured Streaming enables continuous real-time analytics.
-* Windowing and watermarking support reliable stream processing.
+* Previous campaign outcome was the strongest predictor of subscription.
+* Customers with tertiary education maintained higher average balances.
+* Retired customers had the highest average account balances.
+* Call duration showed a strong relationship with subscription success.
+* Contact method and campaign history significantly influenced outcomes.
 
 ---
 
 ## Business Impact
 
-This project demonstrates how distributed machine learning can help financial institutions:
-
-* Improve customer targeting.
-* Increase marketing campaign effectiveness.
-* Support real-time decision making.
-* Scale analytics pipelines.
-* Monitor customer behavior continuously.
-* Generate actionable business intelligence.
+* Supports targeted marketing strategies.
+* Helps identify high-value customer segments.
+* Improves campaign effectiveness through data-driven insights.
+* Demonstrates scalable analytics for banking environments.
+* Provides actionable insights for customer retention and product marketing.
 
 ---
 
-## Learning Outcomes
+## Learnings
 
-Through this project, the following concepts were applied:
-
-* Distributed Computing
-* Hadoop and Hive Analytics
-* Apache Spark Processing
-* Data Parallelism
-* Spark ML Pipelines
-* Model Evaluation
-* Hyperparameter Optimization
-* Structured Streaming
-* Window Operations
-* Watermarking
-* Real-Time Analytics
+* Distributed Computing with Hadoop, Hive, and Spark.
+* Large-scale data processing and optimization.
+* Machine Learning using Spark MLlib.
+* Real-time analytics using Spark Streaming.
+* Dashboard development and storytelling using Power BI.
+* Data modeling and DAX implementation.
 
 ---
 
-## Repository
+## Installation & Setup
 
-GitHub Repository:
+### Clone Repository
 
-https://github.com/Aks18had/Financial-Forecasting-Frontier-Distributed-ML
+```bash
+git clone <repository-url>
+```
+
+### Install Dependencies
+
+```bash
+pip install pyspark pandas numpy matplotlib seaborn scikit-learn
+```
+
+### Run Notebooks
+
+Open the notebooks in Google Colab or Jupyter Notebook and execute the cells sequentially.
+
+---
+
+## Conclusion
+
+This project demonstrates how distributed computing, machine learning, real-time analytics, and business intelligence can be integrated to solve practical banking analytics problems. The solution provides scalable data processing capabilities while delivering meaningful business insights through predictive modeling and interactive dashboards.
 
 ---
 
@@ -298,6 +195,6 @@ https://github.com/Aks18had/Financial-Forecasting-Frontier-Distributed-ML
 
 **Akshad Goyanka**
 
-MSc Computer Science (Artificial Intelligence & Machine Learning)
+M.Sc. Computer Science (AI & ML)
 
-Woolf University
+Data Analytics | Machine Learning | Business Intelligence
